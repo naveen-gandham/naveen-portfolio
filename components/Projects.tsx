@@ -87,22 +87,22 @@ export default function Projects() {
 
   return (
 
-    <section className="py-32">
+    <section className="py-20 md:py-28 px-6 sm:px-8">
 
-      <h2 className="text-4xl font-bold text-center mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 md:mb-20">
         Featured Projects
       </h2>
 
       {/* Project Cards */}
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
 
         {projects.map((project, index) => (
 
           <div
             key={index}
             onClick={() => setSelectedProject(project)}
-            className="cursor-pointer bg-gray-900 rounded-xl overflow-hidden hover:scale-105 transition transform duration-300 shadow-lg"
+            className="cursor-pointer bg-gray-900 rounded-xl overflow-hidden md:hover:scale-105 transition transform duration-300 shadow-lg"
           >
 
             <Image
@@ -110,12 +110,12 @@ export default function Projects() {
               alt={project.title}
               width={500}
               height={300}
-              className="w-full h-48 object-cover"
+              className="w-full h-44 md:h-48 object-cover"
             />
 
-            <div className="p-6">
+            <div className="p-5 md:p-6">
 
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-base md:text-lg font-semibold">
                 {project.title}
               </h3>
 
@@ -132,9 +132,9 @@ export default function Projects() {
 
       {selectedProject && (
 
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
 
-          <div className="bg-gray-900 rounded-xl max-w-3xl w-full p-8 relative">
+          <div className="bg-gray-900 rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative">
 
             {/* Close button */}
 
@@ -151,10 +151,10 @@ export default function Projects() {
               alt={selectedProject.title}
               width={900}
               height={400}
-              className="w-full h-56 object-cover rounded-lg mb-6"
+              className="w-full h-48 md:h-56 object-cover rounded-lg mb-6"
             />
 
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-xl md:text-2xl font-bold mb-6">
               {selectedProject.title}
             </h3>
 
@@ -167,7 +167,7 @@ export default function Projects() {
                 <h4 className="text-red-500 font-semibold mb-2">
                   Problem
                 </h4>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm md:text-base">
                   {selectedProject.problem}
                 </p>
               </div>
@@ -176,7 +176,7 @@ export default function Projects() {
                 <h4 className="text-red-500 font-semibold mb-2">
                   Solution
                 </h4>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm md:text-base">
                   {selectedProject.solution}
                 </p>
               </div>
@@ -192,7 +192,7 @@ export default function Projects() {
                   {selectedProject.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="bg-red-600 text-sm px-3 py-1 rounded"
+                      className="bg-red-600 text-xs md:text-sm px-3 py-1 rounded"
                     >
                       {tech}
                     </span>
@@ -207,7 +207,7 @@ export default function Projects() {
                 <h4 className="text-red-500 font-semibold mb-2">
                   Result
                 </h4>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-300 text-sm md:text-base">
                   {selectedProject.result}
                 </p>
               </div>

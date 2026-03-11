@@ -32,22 +32,22 @@ export default function Education() {
   ]
 
   return (
-    <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+    <section className="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto text-center">
 
-      <h2 className="text-4xl font-bold mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold mb-14 md:mb-20">
         Education
       </h2>
 
       {/* Milestone Cards */}
 
-      <div className="grid md:grid-cols-3 gap-10 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 relative">
 
         {items.map((item, i) => (
 
           <motion.div
             key={i}
             whileHover={{ y: -8 }}
-            className="bg-[#0b1625] border border-gray-800 rounded-xl p-8 shadow-lg relative group"
+            className="bg-[#0b1625] border border-gray-800 rounded-xl p-6 md:p-8 shadow-lg relative group"
           >
 
             {/* icon */}
@@ -56,7 +56,7 @@ export default function Education() {
               {item.icon}
             </div>
 
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="text-lg md:text-xl font-semibold mb-2">
               {item.title}
             </h3>
 
@@ -78,7 +78,7 @@ export default function Education() {
 
             {/* glow */}
 
-            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-red-500/10 to-blue-500/10 blur-xl"></div>
+            <div className="absolute inset-0 rounded-xl opacity-0 md:group-hover:opacity-100 transition bg-gradient-to-r from-red-500/10 to-blue-500/10 blur-xl"></div>
 
           </motion.div>
 
@@ -88,11 +88,11 @@ export default function Education() {
 
       {/* Progress Line */}
 
-      <div className="relative mt-16">
+      <div className="relative mt-14 md:mt-16">
 
         <div className="h-[3px] bg-gradient-to-r from-red-500 via-red-400 to-red-500 w-full rounded-full"></div>
 
-        <div className="flex justify-between mt-4 text-sm text-gray-400">
+        <div className="flex justify-between mt-4 text-xs sm:text-sm text-gray-400">
           <span>SSC</span>
           <span>Intermediate</span>
           <span>B.Tech</span>

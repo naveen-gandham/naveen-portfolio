@@ -36,9 +36,9 @@ export default function Experience() {
   ]
 
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto">
+    <section className="py-20 md:py-24 px-6 sm:px-8 max-w-5xl mx-auto">
 
-      <h2 className="text-4xl font-bold text-center mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 md:mb-20">
         Professional Experience
       </h2>
 
@@ -52,14 +52,14 @@ export default function Experience() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="mb-16 ml-8"
+            className="mb-12 md:mb-16 ml-6 md:ml-8"
           >
 
-            <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-red-600 rounded-full ring-8 ring-black" />
+            <span className="absolute -left-3 flex items-center justify-center w-5 h-5 md:w-6 md:h-6 bg-red-600 rounded-full ring-8 ring-black" />
 
-            <div className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-red-500/20 transition">
+            <div className="bg-gray-900 p-5 md:p-6 rounded-xl shadow-lg md:hover:shadow-red-500/20 transition">
 
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-lg md:text-xl font-semibold">
                 {exp.role}
               </h3>
 

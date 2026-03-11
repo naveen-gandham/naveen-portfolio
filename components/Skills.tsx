@@ -30,20 +30,20 @@ export default function Skills() {
 
   return (
 
-    <section className="py-32">
+    <section className="py-24 md:py-32 px-6 sm:px-8">
 
-      <h2 className="text-4xl font-bold text-center mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 md:mb-20">
         Technical Skills
       </h2>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
 
         {/* Programming Languages */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             Programming Languages
           </h3>
 
@@ -81,9 +81,9 @@ export default function Skills() {
 
         {/* Frontend Development */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             Frontend Development
           </h3>
 
@@ -111,9 +111,9 @@ export default function Skills() {
 
         {/* Backend & Databases */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             Backend & Databases
           </h3>
 
@@ -156,9 +156,9 @@ export default function Skills() {
 
         {/* AI & Machine Learning */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             AI & Machine Learning
           </h3>
 
@@ -196,9 +196,9 @@ export default function Skills() {
 
         {/* Tools & DevOps */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             Tools & DevOps
           </h3>
 
@@ -221,9 +221,9 @@ export default function Skills() {
 
         {/* Teaching Expertise */}
 
-        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800">
+        <div className="bg-gray-900 p-6 md:p-8 rounded-xl border border-gray-800">
 
-          <h3 className="text-xl font-semibold mb-6 text-red-500">
+          <h3 className="text-lg md:text-xl font-semibold mb-6 text-red-500">
             Teaching Expertise
           </h3>
 

@@ -5,20 +5,20 @@ import { motion } from "framer-motion"
 
 export default function About() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto text-center">
+    <section className="py-20 md:py-24 px-6 sm:px-8 max-w-7xl mx-auto text-center">
 
       {/* TITLE */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-8"
+        className="text-3xl md:text-4xl font-bold mb-8"
       >
         About Me
       </motion.h2>
 
       {/* INTRO TEXT */}
-      <div className="max-w-3xl mx-auto text-gray-300 leading-relaxed space-y-6">
+      <div className="max-w-3xl mx-auto text-gray-300 leading-relaxed space-y-6 text-sm md:text-base">
 
         <p>
           I am a{" "}
@@ -44,43 +44,43 @@ export default function About() {
       </div>
 
       {/* COUNTERS */}
-      <div className="grid md:grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-14 md:mt-16">
 
-        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition">
-          <h3 className="text-4xl font-bold text-red-400">
+        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-6 md:p-8 rounded-xl shadow-lg text-center md:hover:scale-105 transition">
+          <h3 className="text-3xl md:text-4xl font-bold text-red-400">
             <Counter end={3000} />+
           </h3>
-          <p className="text-gray-400 mt-2">Students Trained</p>
+          <p className="text-gray-400 mt-2 text-sm md:text-base">Students Trained</p>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition">
-          <h3 className="text-4xl font-bold text-red-400">
+        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-6 md:p-8 rounded-xl shadow-lg text-center md:hover:scale-105 transition">
+          <h3 className="text-3xl md:text-4xl font-bold text-red-400">
             <Counter end={4} />.6 / 5
           </h3>
-          <p className="text-gray-400 mt-2">Student Rating</p>
+          <p className="text-gray-400 mt-2 text-sm md:text-base">Student Rating</p>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition">
-          <h3 className="text-4xl font-bold text-red-400">
+        <div className="bg-white/5 backdrop-blur-xl border border-gray-800 p-6 md:p-8 rounded-xl shadow-lg text-center md:hover:scale-105 transition">
+          <h3 className="text-3xl md:text-4xl font-bold text-red-400">
             <Counter end={3} />+
           </h3>
-          <p className="text-gray-400 mt-2">Industry Roles</p>
+          <p className="text-gray-400 mt-2 text-sm md:text-base">Industry Roles</p>
         </div>
 
       </div>
 
 
       {/* EXPERIENCE CARDS */}
-      <div className="grid md:grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-14 md:mt-16">
 
         {/* Industry */}
-        <div className="bg-[#0f1a2a] p-8 rounded-xl shadow-lg border border-gray-800 hover:border-red-500 transition">
+        <div className="bg-[#0f1a2a] p-6 md:p-8 rounded-xl shadow-lg border border-gray-800 md:hover:border-red-500 transition">
 
-          <h3 className="text-xl font-semibold mb-3 text-white">
+          <h3 className="text-lg md:text-xl font-semibold mb-3 text-white">
             Industry Experience
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             Worked at Bosch Global Software Technologies contributing to
             automotive system development and enterprise engineering workflows.
           </p>
@@ -89,13 +89,13 @@ export default function About() {
 
 
         {/* Teaching */}
-        <div className="bg-[#0f1a2a] p-8 rounded-xl shadow-lg border border-gray-800 hover:border-red-500 transition">
+        <div className="bg-[#0f1a2a] p-6 md:p-8 rounded-xl shadow-lg border border-gray-800 md:hover:border-red-500 transition">
 
-          <h3 className="text-xl font-semibold mb-3 text-white">
+          <h3 className="text-lg md:text-xl font-semibold mb-3 text-white">
             Teaching Impact
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             Trained more than 3000 engineering students in programming,
             full-stack development and problem-solving skills to make them
             industry ready.
@@ -105,13 +105,13 @@ export default function About() {
 
 
         {/* Technical */}
-        <div className="bg-[#0f1a2a] p-8 rounded-xl shadow-lg border border-gray-800 hover:border-red-500 transition">
+        <div className="bg-[#0f1a2a] p-6 md:p-8 rounded-xl shadow-lg border border-gray-800 md:hover:border-red-500 transition">
 
-          <h3 className="text-xl font-semibold mb-3 text-white">
+          <h3 className="text-lg md:text-xl font-semibold mb-3 text-white">
             Technical Expertise
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             Strong foundation in Java, Python, C and C++ along with experience
             in Angular, Node.js, modern web development and AI concepts.
           </p>

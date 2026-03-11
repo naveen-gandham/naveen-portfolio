@@ -37,11 +37,11 @@ export default function Navbar({ setSection }: any) {
 
   return (
 
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center px-4">
 
-      <div className="backdrop-blur-lg bg-black/60 border border-gray-800 rounded-full px-10 py-4 shadow-xl">
+      <div className="backdrop-blur-lg bg-black/60 border border-gray-800 rounded-full px-5 md:px-10 py-3 md:py-4 shadow-xl max-w-full overflow-x-auto">
 
-        <nav className="flex items-center gap-8 text-sm">
+        <nav className="flex items-center gap-5 md:gap-8 text-sm whitespace-nowrap">
 
           {links.map((link) => (
 

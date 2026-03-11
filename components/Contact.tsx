@@ -45,40 +45,40 @@ export default function Contact() {
 
   return (
 
-    <section className="py-28 px-6 max-w-6xl mx-auto text-center">
+    <section className="py-20 md:py-28 px-6 max-w-6xl mx-auto text-center">
 
-      <h2 className="text-4xl font-bold mb-6">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">
         Contact
       </h2>
 
-      <p className="text-gray-400 mb-14">
+      <p className="text-gray-400 mb-12 md:mb-14 text-sm md:text-base">
         Interested in collaboration, hiring, or discussing technology?  
         Feel free to reach out.
       </p>
 
       {/* Contact Cards */}
 
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
 
         {contacts.map((item, i) => {
 
           const Card = (
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="group flex items-center gap-6 bg-[#0b1625] border border-gray-800 rounded-xl p-6 shadow-lg hover:border-red-500 transition"
+              className="group flex items-center gap-4 md:gap-6 bg-[#0b1625] border border-gray-800 rounded-xl p-5 md:p-6 shadow-lg hover:border-red-500 transition"
             >
 
-              <div className="text-red-400 text-2xl group-hover:scale-110 transition">
+              <div className="text-red-400 text-xl md:text-2xl group-hover:scale-110 transition">
                 {item.icon}
               </div>
 
               <div className="text-left">
 
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-400 text-xs md:text-sm">
                   {item.title}
                 </p>
 
-                <p className="font-semibold">
+                <p className="font-semibold text-sm md:text-base break-all">
                   {item.value}
                 </p>
 
@@ -103,7 +103,7 @@ export default function Contact() {
 
       {/* Interactive Map */}
 
-      <div className="w-full h-[400px] rounded-xl overflow-hidden border border-gray-800 shadow-lg">
+      <div className="w-full h-[260px] md:h-[400px] rounded-xl overflow-hidden border border-gray-800 shadow-lg">
 
         <iframe
           src="https://maps.google.com/maps?q=16.355764225954907,80.87578125996473&z=15&output=embed"

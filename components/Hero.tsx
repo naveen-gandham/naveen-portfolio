@@ -9,6 +9,7 @@ export default function Hero() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (window.innerWidth < 768) return
     setPosition({
       x: e.clientX,
       y: e.clientY
@@ -16,30 +17,33 @@ export default function Hero() {
   }
 
   return (
+
     <section
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex items-center px-10 overflow-hidden"
+      className="relative min-h-screen flex items-center px-6 sm:px-8 md:px-10 overflow-hidden"
     >
 
       {/* Mouse spotlight */}
+
       <div
-        className="pointer-events-none absolute w-[600px] h-[600px] rounded-full blur-3xl opacity-20 bg-red-600"
+        className="pointer-events-none absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] rounded-full blur-3xl opacity-20 bg-red-600"
         style={{
-          left: position.x - 300,
-          top: position.y - 300
+          left: position.x - 150,
+          top: position.y - 150
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center w-full">
 
         {/* LEFT SIDE */}
-        <div>
 
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
+        <div className="text-center md:text-left">
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Naveen Kumar Gandham
           </h1>
 
-          <h2 className="text-xl text-red-500 mb-6">
+          <h2 className="text-lg md:text-xl text-red-500 mb-6">
 
             <Typewriter
               words={[
@@ -57,7 +61,7 @@ export default function Hero() {
 
           </h2>
 
-          <p className="text-gray-400 max-w-lg leading-relaxed mb-10">
+          <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed mb-10">
             Trained 3000+ engineering students and worked as Associate
             Software Engineer at Bosch Global Software Technologies.
             I combine industry experience with practical training
@@ -65,20 +69,21 @@ export default function Hero() {
           </p>
 
           {/* Stats */}
-          <div className="flex gap-12">
+
+          <div className="flex flex-wrap justify-center md:justify-start gap-8 md:gap-12">
 
             <div>
-              <h3 className="text-2xl font-bold text-red-500">3000+</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-red-500">3000+</h3>
               <p className="text-gray-400 text-sm">Students Trained</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-red-500">4.6 / 5</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-red-500">4.6 / 5</h3>
               <p className="text-gray-400 text-sm">Student Rating</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-red-500">3+</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-red-500">3+</h3>
               <p className="text-gray-400 text-sm">Industry Roles</p>
             </div>
 
@@ -88,56 +93,23 @@ export default function Hero() {
 
 
         {/* RIGHT SIDE */}
-        <div className="flex justify-center">
 
-          <div className="relative w-[380px] h-[380px] flex items-center justify-center">
+        <div className="flex justify-center mt-10 md:mt-0">
+
+          <div className="relative w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] flex items-center justify-center">
 
             {/* Glow */}
-            <div className="absolute w-72 h-72 bg-red-600 blur-3xl opacity-30 rounded-full"></div>
 
-            {/* React */}
-            <Image
-              src="/react.png"
-              alt="react"
-              width={42}
-              height={42}
-              className="absolute top-0 left-1/2 -translate-x-1/2 float1"
-            />
-
-            {/* Python */}
-            <Image
-              src="/python.png"
-              alt="python"
-              width={42}
-              height={42}
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 float2"
-            />
-
-            {/* Angular */}
-            <Image
-              src="/angular.png"
-              alt="angular"
-              width={42}
-              height={42}
-              className="absolute left-0 top-1/2 -translate-y-1/2 float3"
-            />
-
-            {/* Node */}
-            <Image
-              src="/node.png"
-              alt="node"
-              width={42}
-              height={42}
-              className="absolute right-0 top-1/2 -translate-y-1/2 float4"
-            />
+            <div className="absolute w-48 md:w-60 lg:w-72 h-48 md:h-60 lg:h-72 bg-red-600 blur-3xl opacity-30 rounded-full"></div>
 
             {/* Profile Photo */}
+
             <Image
               src="/passport.jpg"
               alt="Naveen Kumar Gandham"
-              width={220}
-              height={220}
-              className="rounded-xl relative z-10"
+              width={180}
+              height={180}
+              className="rounded-xl relative z-10 w-[150px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-auto"
             />
 
           </div>
@@ -147,5 +119,6 @@ export default function Hero() {
       </div>
 
     </section>
+
   )
 }
